@@ -138,7 +138,12 @@ public class ABB<T extends Comparable<T>> {
                   if(aux.getDireita() != null){
                      fila.enqueue(aux.getDireita());
                  }
-                  if(aux.getEsquerda() != null && aux.getDireita() != null){  // se nao for final conta ela
+                     if(aux.getEsquerda() != null && aux.getDireita() == null){  // se nao for final conta ela
+                 cont++;
+                 }
+                  else if(aux.getEsquerda() == null && aux.getDireita() != null){  // se nao for final conta ela
+                 cont++;
+                 } else if(aux.getEsquerda() != null && aux.getDireita() != null){  // se nao for final conta ela
                  cont++;
                  }
              }
